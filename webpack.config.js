@@ -6,7 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'build.js'
+    filename: 'vue-mods-names.js',
+    libraryTarget: 'umd',
+    library: 'VueModsNames',
+    umdNamedDefine: true
   },
   module: {
     rules: [
@@ -14,16 +17,10 @@ module.exports = {
         test: /\.(js|vue)$/,
         enforce: 'pre',
         use: [
-            'eslint-loader'
+          'eslint-loader'
         ]
       },
       {
-        test: /\.css$/,
-        use: [
-          'vue-style-loader',
-          'css-loader'
-        ],
-      },      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -36,21 +33,8 @@ module.exports = {
         test: /\.js$/,
         loader: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
       }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.esm.js'
-    },
-    extensions: ['*', '.js', '.vue', '.json']
   },
   devServer: {
     historyApiFallback: true,

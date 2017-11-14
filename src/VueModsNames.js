@@ -1,12 +1,21 @@
 let VueModsNames = {
-  install (Vue) {
+  install (Vue, prefix = '_') {
     Vue.mixin({
+      props: {
+        mods: {
+          type: [String, Array]
+        },
+        baseClass: {
+          type: String
+        }
+      },
       computed: {
-        classArr () {
+        modsNames () {
+          let baseClassName = this.baseClass ? this.baseClass : this.$el.classList[0]
           if (Array.isArray(this.mods)) {
-            return !!this.mods && this.mods.map(i => this.name + i)
+            return !!this.mods && this.mods.map(i => baseClassName + prefix + i)
           }
-          return `this.name_${this.mods}`
+          return baseClassName + prefix + this.mods
         }
       }
     })
