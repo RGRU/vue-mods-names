@@ -8,7 +8,7 @@ module.exports = {
     publicPath: '/dist/',
     filename: 'vue-mods-names.js',
     libraryTarget: 'umd',
-    library: 'VueModsNames',
+    library: 'vue-mods-names',
     umdNamedDefine: true
   },
   module: {
