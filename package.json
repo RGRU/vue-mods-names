@@ -1,7 +1,7 @@
 {
   "name": "vue-mods-names",
   "description": "Simple adding mods to all components class names in your vue app",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "RGRU team | KamilOcean <dev@rg.ru> (https://github.com/RGRU/)",
   "license": "MIT",
   "main": "dist/vue-mods-names.js",
@@ -16,7 +16,6 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "eslint-plugin-vue": "^2.1.0",
     "vue": "^2.4.4"
   },
   "browserslist": [

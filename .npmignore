@@ -1,0 +1,6 @@
+src/
+.babelrc
+.editorconfig
+.eslintrc
+
+*.js
