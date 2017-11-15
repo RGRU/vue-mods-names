@@ -24,6 +24,9 @@ let VueModsNames = {
             if (this.addOriginClass) classArrWithOrigin.unshift(this.baseClass)
             return classArrWithOrigin.join(' ')
           }
+
+          if (!this.mods) return this.baseClass
+
           return this.addOriginClass ? this.baseClass + ' ' + this.baseClass + prefix + this.mods : this.baseClass + prefix + this.mods
         }
       }
