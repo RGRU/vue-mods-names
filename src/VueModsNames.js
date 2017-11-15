@@ -1,21 +1,27 @@
 let VueModsNames = {
   install (Vue, prefix = '_') {
+    Vue.directive('mods-names', {
+      inserted (el, binding, vnode) {
+        vnode.context.baseClass = binding.arg
+        vnode.context.addOriginClass = binding.modifiers.origin
+        vnode.elm.classList = vnode.context.modsNames
+      }
+    })
     Vue.mixin({
+      data () {
+        return { baseClass: null, addOriginClass: false }
+      },
       props: {
         mods: {
           type: [String, Array]
-        },
-        baseClass: {
-          type: String
         }
       },
       computed: {
         modsNames () {
-          let baseClassName = this.baseClass ? this.baseClass : this.$el.classList[0]
           if (Array.isArray(this.mods)) {
-            return !!this.mods && this.mods.map(i => baseClassName + prefix + i)
+            return !!this.mods && this.mods.map(i => this.baseClass + prefix + i)
           }
-          return baseClassName + prefix + this.mods
+          return this.baseClass + prefix + this.mods
         }
       }
     })
