@@ -20,7 +20,9 @@ let VueModsNames = {
         modsNames () {
           if (Array.isArray(this.mods)) {
             let classArr = !!this.mods && this.mods.map(i => this.baseClass + prefix + i)
-            return this.addOriginClass ? classArr.unshift(this.baseClass) : classArr
+            let classArrWithOrigin = classArr.slice()
+            if (this.addOriginClass) classArrWithOrigin.unshift(this.baseClass)
+            return classArrWithOrigin.join(' ')
           }
           return this.addOriginClass ? this.baseClass + ' ' + this.baseClass + prefix + this.mods : this.baseClass + prefix + this.mods
         }
