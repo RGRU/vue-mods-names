@@ -8,13 +8,13 @@ var webpackConfig = require('./webpack.config.js')
 module.exports = function (config) {
   config.set({
     browsers: ['ChromeHeadless'],
-    frameworks: ['mocha'],
+    frameworks: ['mocha', 'chai'],
     reporters: ['spec', 'coverage'],
     files: [
       {pattern: 'test/*.spec.js', watched: false}
     ],
     preprocessors: {
-      './index.js': ['webpack']
+      './test/Main.spec.js': ['webpack']
     },
     webpack: webpackConfig,
     webpackMiddleware: {

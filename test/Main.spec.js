@@ -4,8 +4,24 @@ import VueModsNames from '../src/VueModsNames'
 Vue.use(VueModsNames)
 
 const vm = new Vue({
-  template: '<div v-mods-names:good.origin>Its very good</div>'
-})
+  render (h) {
+    return h(
+      'div', {
+        directives: [
+          {
+            name: 'v-mods-names',
+            arg: 'good',
+            modifiers: {
+              origin: true
+            }
+          }
+        ]
+      }
+    )
+  }
+}).$mount()
+
+console.log(vm.$el)
 
 describe('Main test', () => {
   it('Have a base ClassName', () => {
