@@ -7,9 +7,10 @@ const vm = new Vue({
   render (h) {
     return h(
       'div', {
+        'class': 'bad',
         directives: [
           {
-            name: 'v-mods-names',
+            name: 'mods-names',
             arg: 'good',
             modifiers: {
               origin: true
