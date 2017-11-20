@@ -1,5 +1,6 @@
 var path = require('path')
 var webpack = require('webpack')
+var FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 module.exports = {
   entry: './src/VueModsNames.js',
@@ -16,6 +17,7 @@ module.exports = {
       {
         test: /\.js$/,
         enforce: 'pre',
+        // exclude: 'test',
         use: [
           'eslint-loader'
         ]
@@ -66,4 +68,8 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true
     })
   ])
+} else {
+  module.exports.plugins = [
+    new FriendlyErrorsWebpackPlugin()
+  ]
 }

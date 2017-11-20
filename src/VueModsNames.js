@@ -2,7 +2,7 @@ let VueModsNames = {
   install (Vue, prefix = '_') {
     Vue.directive('mods-names', {
       inserted (el, binding, vnode) {
-        vnode.context.baseClass = binding.arg
+        vnode.context.baseClass = binding.arg || vnode.elm.className
         vnode.context.addOriginClass = binding.modifiers.origin
         vnode.elm.classList = vnode.context.modsNames
       }
