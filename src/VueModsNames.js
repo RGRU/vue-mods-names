@@ -27,7 +27,9 @@ export default {
 
           if (!this.mods) return this.baseClass
 
-          return this.addOriginClass ? `${this.baseClass} ${this.baseClass}${prefix}${this.mods}` : this.baseClass + prefix + this.mods
+          return this.addOriginClass
+                ? `${this.baseClass} ${this.baseClass}${prefix}${this.mods}`
+                : this.baseClass + prefix + this.mods
         }
       }
     })
