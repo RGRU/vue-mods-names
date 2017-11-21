@@ -101,5 +101,5 @@ And you can using your component in other places like this:
 <Good mods="red-text">
 ```
 
-If your typicall workflow is something like this and you always use modifications for classes, than you'll be happy to use this plugin because it's allow you to set this behavior for all components in your application.
+If your typical workflow is something like this and you always use modifications for classes, than you'll be happy to use this plugin because it's allow you to set this behavior for all components in your application.
 Also vue-mods-names allow to set prefix between className and mods. And the most helpful feature is allowing to send props like `Array` or `String`
