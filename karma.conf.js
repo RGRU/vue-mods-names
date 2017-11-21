@@ -14,7 +14,7 @@ module.exports = function (config) {
       {pattern: 'test/*.spec.js', watched: false}
     ],
     preprocessors: {
-      './test/Main.spec.js': ['webpack']
+      './test/AllRealCases.spec.js': ['webpack']
     },
     webpack: webpackConfig,
     webpackMiddleware: {
