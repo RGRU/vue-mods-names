@@ -1,4 +1,4 @@
-let VueModsNames = {
+export default {
   install (Vue, prefix = '_') {
     Vue.directive('mods-names', {
       inserted (el, binding, vnode) {
@@ -13,7 +13,7 @@ let VueModsNames = {
       },
       props: {
         mods: {
-          type: [String, Array]
+          type: [ String, Array ]
         }
       },
       computed: {
@@ -27,11 +27,9 @@ let VueModsNames = {
 
           if (!this.mods) return this.baseClass
 
-          return this.addOriginClass ? this.baseClass + ' ' + this.baseClass + prefix + this.mods : this.baseClass + prefix + this.mods
+          return this.addOriginClass ? `${this.baseClass} ${this.baseClass}${prefix}${this.mods}` : this.baseClass + prefix + this.mods
         }
       }
     })
   }
 }
-
-export default VueModsNames
