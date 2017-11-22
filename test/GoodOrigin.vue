@@ -1,3 +1,3 @@
 <template>
-  <div v-mods-names:good.origin></div>
+  <div v-mods-names:good.no-origin></div>
 </template>
