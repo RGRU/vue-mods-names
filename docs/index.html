@@ -20,13 +20,32 @@
     <a href="#/ru/">RU</a>
     <a href="#/ua/">UA</a>
   </nav>
-  <div id="app"></div>
+  <div id="app">Loading...</div>
   <script>
     window.$docsify = {
       name: 'vue-mods-names',
-      repo: 'https://github.com/RGRU/vue-mods-names'
+      repo: 'https://github.com/RGRU/vue-mods-names',
     }
   </script>
+  <script src="https://npmcdn.com/vue-router@2.4.0/dist/vue-router.js"></script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <style type="text/css">
+    .sidebar-nav {
+      position: relative;
+    }
+    .sidebar-nav:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 50%;
+      margin-top: 50px;
+      margin-left: -50px;
+      background-image: url(assets/rgru-logo.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
 </body>
 </html>
