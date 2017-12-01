@@ -352,3 +352,5 @@ Component renders with base class, that you write by your hands and generated cl
 ```
 
 > But it's senselessly and more easy to write in template directive with base class like in example above: `v-mods-names:awesome`
+
+[KamilOcean](https://twitter.com/kamil_ocean)

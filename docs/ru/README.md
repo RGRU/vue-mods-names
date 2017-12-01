@@ -359,3 +359,5 @@ Vue.use(VueModsNames, { prefix: '-' })
 ```
 
 > Однако в этом мало смысла и гораздо проще написать в шаблоне директиву с базовым классом как в примере выше: `v-mods-names:awesome`
+
+[KamilOcean](https://twitter.com/kamil_ocean)
