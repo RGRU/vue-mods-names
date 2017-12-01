@@ -32,7 +32,7 @@ describe('Main test', () => {
   it('Has one mod + no-origin - baseClass(arg)', () => {
     let vm = createVM(classNameOrigin, 'first-mod')
     expect(vm.$el.classList.contains(baseClass + '_first-mod')).to.be.true
-    expect(vm.$el.classList.contains(baseClass)).not.to.be.true
+    expect(vm.$el.classList.contains(baseClass)).to.be.true
   })
 
   it('Has array of mod + no-origin - baseClass(arg)', () => {
@@ -40,7 +40,7 @@ describe('Main test', () => {
     expect(vm.$el.classList.contains(baseClass + '_first-mod')).to.be.true
     expect(vm.$el.classList.contains(baseClass + '_second-mod')).to.be.true
     expect(vm.$el.classList.contains(baseClass + '_third')).to.be.true
-    expect(vm.$el.classList.contains(baseClass)).not.to.be.true
+    expect(vm.$el.classList.contains(baseClass)).to.be.true
   })
 
   it('Has no mod + no-origin + baseClass(arg)', () => {
