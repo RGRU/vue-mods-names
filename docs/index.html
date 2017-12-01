@@ -13,6 +13,8 @@
 <!-- depend vue -->
 <script src="//unpkg.com/vue"></script>
 <script src="//unpkg.com/vuep"></script>
+<script src="https://npmcdn.com/vue-router@2.4.0/dist/vue-router.js"></script>
+<script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
 </head>
 <body>
   <nav>
@@ -25,10 +27,12 @@
     window.$docsify = {
       name: 'vue-mods-names',
       repo: 'https://github.com/RGRU/vue-mods-names',
-      ga: 'UA-54500419-4'
+      ga: 'UA-54500419-4',
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/RGRU/vue-mods-names/blob/master/docs/')
+      ]
     }
   </script>
-  <script src="https://npmcdn.com/vue-router@2.4.0/dist/vue-router.js"></script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
   <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
   <style>
