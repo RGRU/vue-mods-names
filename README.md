@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/RGRU/vue-mods-names.svg?branch=master)](https://travis-ci.org/RGRU/vue-mods-names)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Docs with examples:<br>
+Docs with examples and playgrounds:<br>
 [English](https://rgru.github.io/vue-mods-names/#/)<br>
 [Russian](https://rgru.github.io/vue-mods-names/#/ru/)
 
@@ -73,3 +73,5 @@ After render we get this:
 ```html
 <div class="good good_main good_big">It's cool</div>
 ```
+
+[KamilOcean](https://twitter.com/kamil_ocean)
