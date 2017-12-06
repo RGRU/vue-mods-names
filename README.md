@@ -74,6 +74,4 @@ After render we get this:
 <div class="good good_main good_big">It's cool</div>
 ```
 
-## Playground
-
 [KamilOcean](https://twitter.com/kamil_ocean)
