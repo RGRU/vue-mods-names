@@ -31,7 +31,7 @@ export default {
 
           if (Array.isArray(this.mods)) {
             let classArr = !!this.mods && this.mods.map(i => generateAdditionClass(i))
-            // Don't touch originial array of classes
+            // Don't touch original array of classes
             let classArrWithOrigin = classArr.slice(0)
             // If comopnent should render with base class, then add base class to begin of array
             if (!this.$addOriginClass) classArrWithOrigin.unshift(this.$baseClass)
