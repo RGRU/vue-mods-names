@@ -13,6 +13,8 @@
 <!-- depend vue -->
 <script src="//unpkg.com/vue"></script>
 <script src="//unpkg.com/vuep"></script>
+<script src="https://npmcdn.com/vue-router@2.4.0/dist/vue-router.js"></script>
+<script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
 </head>
 <body>
   <nav>
@@ -25,26 +27,29 @@
     window.$docsify = {
       name: 'vue-mods-names',
       repo: 'https://github.com/RGRU/vue-mods-names',
+      ga: 'UA-54500419-4',
+      plugins: [
+        EditOnGithubPlugin.create('https://github.com/RGRU/vue-mods-names/blob/master/docs/')
+      ]
     }
   </script>
-  <script src="https://npmcdn.com/vue-router@2.4.0/dist/vue-router.js"></script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <style type="text/css">
-    .sidebar-nav {
-      position: relative;
+  <script src="//unpkg.com/docsify/lib/plugins/ga.min.js"></script>
+  <style>
+    .sidebar {
+      padding-top: 10px;
     }
-    .sidebar-nav:after {
-      content: "";
+    .sidebar:before {
+      content: '';
+      width: 220px;
+      height: 76px;
+      margin-top: 20px;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 30px;
       display: block;
-      width: 100px;
-      height: 100px;
-      position: absolute;
-      left: 50%;
-      margin-top: 50px;
-      margin-left: -50px;
-      background-image: url(assets/rgru-logo.png);
-      background-size: cover;
-      background-repeat: no-repeat;
+      background: url("/vue-mods-names/assets/rg-main.png") no-repeat center center;
+      background-size: contain;
     }
   </style>
 </body>

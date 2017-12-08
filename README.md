@@ -1,107 +1,77 @@
 # vue-mods-names
-> Simple adding mods to all components class names in your vue app
+> Simple adding class names mods to all components in your vue app
 
 [![npm version](https://badge.fury.io/js/vue-mods-names.svg)](https://badge.fury.io/js/vue-mods-names)
 [![Build Status](https://travis-ci.org/RGRU/vue-mods-names.svg?branch=master)](https://travis-ci.org/RGRU/vue-mods-names)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-## Installation
+Docs with examples and playgrounds:<br>
+[English](https://rgru.github.io/vue-mods-names/#/)<br>
+[Russian](https://rgru.github.io/vue-mods-names/#/ru/)
+
+## Install
+
+So typically
 
 ```js
 npm i vue-mods-names -D
 ```
 
-# Usage
-
+## Usage
 ```js
-import VueModsNames from './VueModsNames'
+import VueModsNames from 'vue-mods-names'
 
 Vue.use(VueModsNames)
 ```
-```html
-<!-- in your components without main class: -->
-<div v-mods-names:close></div>
+If you want to change prefix (by default is equal: `_`), then just pass it in plugin options, like this:
+```js
+import VueModsNames from 'vue-mods-names'
 
-<!-- in your components with main class: -->
-<div v-mods-names:close.origin></div>
+Vue.use(VueModsNames, { prefix: '-' })
+```
+After that any component in your app is ready to use mods. It will work if you declare name of base class in directive `v-mods-names:`
+
+Declare behavior by adding special directive `v-mods-names` in your template. `good` - is name of base class, that will join with other mods.
+
+`Good.vue`
+```html
+<!-- Template of 'Good' component, that will be include in other places -->
+<div v-mods-names:good>It's cool</div>
 ```
 
-> If you use component close with this template:
+Now we may use component with different mods:
 
+`main page`
 ```html
-<!-- close component -->
-<div v-mods-names:close.origin></div>
+<Good mods="main" />
 ```
 
-And you include it in your app, you can send props to your component via mods. It can be String or Array of strings. For example:
+In the issue you have component on main page, that has classes after render:
+
 ```html
-  <div class="main-page">
-    <Close :mods="['good', 'awesome']">
-  </div>
-```
-And result will be:
-```html
-  <div class="close close_good close_awesome"></div>
+<div class="good good_main">It's cool</div>
 ```
 
-Yeah, if you use same workflow this plugin will be very helpful for you and save a little time for you and avoid to routine job.
+> All style modifications of component typically describe in component file itself (one file component).
 
-## Reasons of using
-This plugin will be very helpful if you using some kind of methodology for manage classes with modifications (`mods`) of your components and you use common method for reach this.
+```css
+.good {}
 
-Imagine that you have a component with class `good`
-```html
-<div class="good">
-  My awesome component in main page
-</div>
-<style>
-.good {
-  color: black;
-}
-</style>
+.good_main {}
+
+.good_big {}
 ```
 
-But in article page the component has to be with other styles. For example with red color text. If you using some methodology, you may want to define addition modifications for your component. It can made like this:
-```html
-<div class="good good_red-text">
-  My awesome component in main page
-</div>
-<style>
-.good {
-  color: black;
-}
+You can pass Array of mods:
 
-.good_red-text {
-  color: red;
-}
-</style>
+```html
+<Good :mods="['main', 'big']" />
 ```
 
-Of course you should use modifications as props and manage them by including component. For example finally you'll made `good` component like this:
+After render we get this:
+
 ```html
-<div class="good" :class="classWithMod">
-  My awesome component in main page
-</div>
-<script>
-export default {
-  props: ['mods']
-  computed: {
-    classWithMod() {
-      return 'good_' + this.mods
-    }
-  }
-}
-</script>
+<div class="good good_main good_big">It's cool</div>
 ```
 
-And you can using your component in other places like this:
-```html
-<!-- main page -->
-<Good />
-
-<!-- article page -->
-<Good mods="red-text">
-```
-
-If your typical workflow is something like this and you always use modifications for classes, than you'll be happy to use this plugin because it's allow you to set this behavior for all components in your application.
-Also vue-mods-names allow to set prefix between className and mods. And the most helpful feature is allowing to send props like `Array` or `String`
+[KamilOcean](https://twitter.com/kamil_ocean)
