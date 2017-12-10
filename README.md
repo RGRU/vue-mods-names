@@ -8,7 +8,7 @@
 Docs with examples and playgrounds:<br>
 [English](https://rgru.github.io/vue-mods-names/#/):us:<br>
 [Русский](https://rgru.github.io/vue-mods-names/#/ru/):ru:<br>
-[Українська](https://rgru.github.io/vue-mods-names/#/ua/):ua:
+[Українська](https://rgru.github.io/vue-mods-names/#/ua/):ukr:
 
 ## Install
 
