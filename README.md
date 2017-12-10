@@ -6,9 +6,9 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Docs with examples and playgrounds:<br>
-[English](https://rgru.github.io/vue-mods-names/#/):us<br>
-[Русский](https://rgru.github.io/vue-mods-names/#/ru/):ru<br>
-[Українська](https://rgru.github.io/vue-mods-names/#/ua/):ua
+[English](https://rgru.github.io/vue-mods-names/#/):us:<br>
+[Русский](https://rgru.github.io/vue-mods-names/#/ru/):ru:<br>
+[Українська](https://rgru.github.io/vue-mods-names/#/ua/):ua:
 
 ## Install
 
