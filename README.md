@@ -1,6 +1,8 @@
 # vue-mods-names
 > Simple adding class names mods to all components in your vue app
 
+![example](./assets/vue-mods-names.gif)
+
 [![npm version](https://badge.fury.io/js/vue-mods-names.svg)](https://badge.fury.io/js/vue-mods-names)
 [![Build Status](https://travis-ci.org/RGRU/vue-mods-names.svg?branch=master)](https://travis-ci.org/RGRU/vue-mods-names)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
