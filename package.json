@@ -1,7 +1,7 @@
 {
   "name": "vue-mods-names",
   "description": "Simple adding mods to all components class names in your vue app",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "RGRU team | KamilOcean <dev@rg.ru> (https://github.com/RGRU/)",
   "license": "MIT",
   "main": "dist/vue-mods-names.js",
