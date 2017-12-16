@@ -4,7 +4,7 @@ export default {
       inserted (el, binding, { context, elm }) {
         context.$baseClass = binding.arg || elm.className
         context.$addOriginClass = binding.modifiers['no-origin']
-        elm.classList += ' ' + context.$modsNames
+        elm.setAttribute('class', elm.classList + ' ' + context.$modsNames)
       },
       update (el, binding, { data, elm, context }, oldVnode) {
         if (data.class !== oldVnode.data.class) {
