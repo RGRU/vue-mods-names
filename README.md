@@ -10,8 +10,8 @@
 Docs with examples and playgrounds:<br>
 [English](https://rgru.github.io/vue-mods-names/#/)<br>
 [Русский](https://rgru.github.io/vue-mods-names/#/ru/)<br>
-[Українська](https://rgru.github.io/vue-mods-names/#/ua/)
-[français](https://rgru.github.io/vue-mods-names/#/fr/)
+[Українська](https://rgru.github.io/vue-mods-names/#/ua/)<br>
+[français](https://rgru.github.io/vue-mods-names/#/fr/)<br>
 
 ## Install
 
